@@ -56,10 +56,7 @@ class _WordSearchGrid {
                             if(current_validator.check({current: row_index, len: this._data_info.row},
                                                        {current: col_index, len: this._data_info.col},
                                                        {current: this._target_words[diff_index], len: this._target_words[diff_index].length})) {
-                                // found_items.add(diffs[diff_index]);
                                 results.push([row_index, col_index, this._target_words[diff_index], current_validator.get_name()]);
-                                // break
-
                             }
                         }
                     }

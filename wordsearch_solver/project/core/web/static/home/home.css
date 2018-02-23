@@ -7,19 +7,6 @@
     border: 1px solid blanchedalmond;
 }
 
-
-
-
-/*#puzzle_page {*/
-    /*display: grid;*/
-    /*grid-template-areas:*/
-            /*"puzzle_area puzzle_area puzzle_area target_words"*/
-            /*"puzzle_area puzzle_area puzzle_area target_words"*/
-            /*"puzzle_area puzzle_area puzzle_area target_words"*/
-            /*"word_targets word_targets word_targets target_words"*/
-            /*"misc misc misc misc";*/
-/*}*/
-
 #puzzle_page {
     display: grid;
     grid-template-areas:
@@ -34,7 +21,6 @@
 }
 
 #misc {
-    /*justify-self: center;*/
     margin-top: 30px;
     grid-area: misc;
 }
@@ -53,9 +39,7 @@
 #word_targets {
     margin-top: 20px;
     display: flex;
-    /*align-content: space-between;*/
     grid-area: word_targets;
-    /*justify-content: space-between;*/
     flex-direction: column;
     flex-wrap: wrap;
     height: 300px;
@@ -67,9 +51,5 @@
     flex-basis: max-content;
     margin: 10px;
     height: 20px;
-    /*flex-grow: 1;*/
-
-    /*margin: 20px;*/
-    /*min-height: 2em;*/
 
 }

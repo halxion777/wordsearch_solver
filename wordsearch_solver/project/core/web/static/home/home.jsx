@@ -125,16 +125,11 @@ class GridPuzzle extends React.Component{
 
     search_word(event) {
         var word = this.refs.word_search.value.toUpperCase().replace(/ /g, "");
-        // if(word.length < 1)
-        //     this.setState({
-        //         current_search_color: '#'+(Math.random()*0xFFFFFF<<0).toString(16)
-        //     })
         var current_actives = {};
         var coords = this.solver.solve([word]);
         var index;
         var state = this.state;
 
-        // var color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
         for(index=0; index < coords.length; index++) {
             var current_coords = coords[index];
             var highlighted = this.highlight_coord(current_coords[0], current_coords[1], current_coords[2].length, current_coords[3]);
