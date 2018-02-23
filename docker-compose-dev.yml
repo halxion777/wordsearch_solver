@@ -1,0 +1,24 @@
+version: "3.4"
+
+
+services:
+  wordsearch_solver:
+    build:
+      context: ./wordsearch_solver
+      dockerfile: Dockerfile
+
+    ports:
+      - "5000:5000"
+
+
+    volumes:
+      - ./wordsearch_solver/project:/app
+
+  nginx:
+    depends_on:
+      - wordsearch_solver
+    build:
+      context: ./nginx/test
+
+    volumes:
+      - ./nginx/test/conf:/etc/nginx/conf.d

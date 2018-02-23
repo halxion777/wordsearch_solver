@@ -1,0 +1,28 @@
+version: "3.4"
+
+
+services:
+  wordsearch_solver:
+    build:
+      context: ./wordsearch_solver
+      dockerfile: Dockerfile
+
+    ports:
+      - "5000:5000"
+
+
+    volumes:
+      - ./wordsearch_solver/project:/app
+
+  nginx:
+    depends_on:
+      - wordsearch_solver
+    build:
+      context: ./nginx/prod
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/prod/conf:/etc/nginx/conf.d
+      - ./nginx/prod/certs/certs:/etc/letsencrypt
+      - ./nginx/prod/certs/certs_data:/data/letsencrypt
