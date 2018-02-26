@@ -4,5 +4,6 @@ nginx/prod/certs
 solver.py.bak
 __pycache__/
 .idea/
+solver/
 
 
