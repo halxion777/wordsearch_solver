@@ -7,18 +7,45 @@
     border: 1px solid blanchedalmond;
 }
 
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+
 #puzzle_page {
     display: grid;
     grid-template-areas:
-            ". puzzle_area puzzle_area misc ."
-            ". puzzle_area puzzle_area misc ."
-            ". word_targets word_targets . .";
+            ". puzzle_area word_targets word_targets ."
+            ". puzzle_area word_targets word_targets ."
+            ". puzzle_area . . .";
+}
+
+
+#puzzle_select {
+    justify-self: center;
+    /*width: inherit;*/
 }
 
 #puzzle_area {
     justify-self: center;
+    display: grid;
     grid-area: puzzle_area;
+    grid-template-areas:  "puzzle_label puzzle_label" "puzzle puzzle" "misc misc";
 }
+
+#puzzle {
+    grid-area: puzzle;
+}
+
+
+
+#puzzle_label {
+    grid-area: puzzle_label;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 
 #misc {
     margin-top: 30px;
@@ -37,18 +64,45 @@
 }
 
 #word_targets {
-    margin-top: 20px;
-    display: flex;
+
+    display: grid;
     grid-area: word_targets;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 300px;
-    width: 200px;
+    grid-template-areas:
+            ". target_words_label  ."
+            "target_word_area target_word_area target_word_area";
 
 }
 
+
+
+#target_words_label {
+    margin-bottom: 20px;
+    grid-area: target_words_label;
+}
+
+#target_word_area {
+    /*margin-top: 20px;*/
+    display: flex;
+    grid-area: target_word_area;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 300px;
+
+}
+
+#word_search {
+    width: 500px;
+    height: 25px;
+}
+
+#add_searched {
+    width: 90px;
+    height: 30px;
+}
+
 .current_targets {
-    flex-basis: max-content;
+    flex-basis: auto;
     margin: 10px;
     height: 20px;
 
