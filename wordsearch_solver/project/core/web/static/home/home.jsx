@@ -22,12 +22,14 @@ class GridPuzzle extends React.Component{
             current_targets: [],
             added_targets: {},
             current_search_color: $.xcolor.random(),
-            sample_file: null,
+            sample_file: {label: "ARGUMENTS", value: "arguments_data"},
             sample_files: [
-                {label: "Arguments", value: "arguments_data"},
-                {label: "European Countries", value: "european_countries"},
-                {label: "Lots of Words", value: "lots_of_words"},
-                {label: "US States", value: "us_states"}
+                {label: "ARGUMENTS", value: "arguments_data"},
+                {label: "EUROPEAN COUNTRIES", value: "european_countries"},
+                {label: "LOTS OF WORDS", value: "lots_of_words"},
+                {label: "US STATES", value: "us_states"},
+                {label: "CAMPING", value: "camping"},
+                {label: "SELF HELP", value: "self_help"}
 
             ]
         }
@@ -52,41 +54,32 @@ class GridPuzzle extends React.Component{
     }
 
     highlight_coord(row, col, word_len, direction) {
-        var coord_index;
         switch(direction) {
             case "Left":
-                var col=col;
-                var state = this.state.puzzle;
-                var coords = []
+                var coords = [];
                 for(col; word_len > 0; word_len--, col--) {
                     coords.push(row.toString() + "," + col.toString())
                 }
                 return coords;
             case "Right":
-                var col=col;
-                var state = this.state.puzzle;
                 var coords = []
                 for(col; word_len > 0; word_len--, col++) {
                     coords.push(row.toString() + "," + col.toString())
                 }
                 return coords;
             case "Top":
-                var row=row;
-                var coords = []
+                var coords = [];
                 for(row; word_len > 0; word_len--, row--) {
                     coords.push(row.toString() + "," + col.toString())
                 }
                 return coords;
             case "Bottom":
-                var row=row;
                 var coords = [];
                 for(row; word_len > 0; word_len--, row++) {
                     coords.push(row.toString() + "," + col.toString())
                 }
                 return coords;
             case "BottomRight":
-                var row=row;
-                var col=col;
                 var coords = [];
                 for(row; word_len > 0; word_len--, row++, col++) {
                     coords.push(row.toString() + "," + col.toString())
@@ -94,8 +87,6 @@ class GridPuzzle extends React.Component{
                 return coords;
 
             case "BottomLeft":
-                var row=row;
-                var col=col;
                 var coords = [];
                 for(row; word_len > 0; word_len--, row++, col--) {
                     coords.push(row.toString() + "," + col.toString())
@@ -103,17 +94,13 @@ class GridPuzzle extends React.Component{
                 return coords;
 
             case "TopLeft":
-            var row=row;
-            var col=col;
-            var coords = [];
-            for(row; word_len > 0; word_len--, row--, col--) {
-                coords.push(row.toString() + "," + col.toString())
-            }
-            return coords;
+                var coords = [];
+                for(row; word_len > 0; word_len--, row--, col--) {
+                    coords.push(row.toString() + "," + col.toString())
+                }
+                return coords;
 
            case "TopRight":
-                var row=row;
-                var col=col;
                 var coords = [];
                 for(row; word_len > 0; word_len--, row--, col++) {
                     coords.push(row.toString() + "," + col.toString())
@@ -141,12 +128,6 @@ class GridPuzzle extends React.Component{
             }
         }
         this.setState({actives: current_actives, word_count: coords.length});
-
-
-
-
-
-
     }
 
     create_grid() {
@@ -270,19 +251,33 @@ class GridPuzzle extends React.Component{
         return items;
     }
 
+    componentDidMount() {
+        this.get_samplefiles(this.state.sample_file)
+    }
+
 
     render() {
         return (
             <div id={"puzzle_page"}>
-                <div id={"puzzle_area"}>{this.create_grid()}</div>
-                <div id={"misc"}>
-                    <Select value={this.state.sample_file} options={this.state.sample_files} onChange={this.get_samplefiles.bind(this)} />
-                    <input id={"upload"} type={"file"} onChange={this.read_json_file.bind(this)} accept=".json"/>
-                    <input onKeyDown={this.handle_input.bind(this)} id={"word_search"} ref={"word_search"} onChange={this.search_word.bind(this)}/>
-                    <button onClick={this.handle_input.bind(this)} id={"add_searched"}>Mark</button>
+
+                <div id={"puzzle_area"}>
+                    <h1 id={"puzzle_label"}>{this.state.sample_file.label}</h1>
+                    <div id={"puzzle"}>{this.create_grid()}</div>
+                    <div id={"misc"}>
+                        <div id={"puzzle_select"}>
+                            <Select  searchable={false} value={this.state.sample_file} options={this.state.sample_files} onChange={this.get_samplefiles.bind(this)} />
+                        </div>
+                        {/*<input id={"upload"} type={"file"} onChange={this.read_json_file.bind(this)} accept=".json"/>*/}
+                        <input type={"text"} placeholder={"Search Word"} onKeyDown={this.handle_input.bind(this)} id={"word_search"} ref={"word_search"} onChange={this.search_word.bind(this)}/>
+                        <button onClick={this.handle_input.bind(this)} id={"add_searched"}>Mark</button>
+                    </div>
                 </div>
                 <div id={"word_targets"}>
-                    {this.get_current_targets()}
+                    <h1 id={"target_words_label"}>Target Words</h1>
+                    <div id={"target_word_area"}>
+                        {this.get_current_targets()}
+                    </div>
+
                 </div>
             </div>
         )
