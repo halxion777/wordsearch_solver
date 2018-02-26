@@ -14,8 +14,8 @@ class Validator {
         var cur_col = col_info.current;
         var matched = 0;
         var is_valid=false;
-        var letter_index;
-        for(letter_index=0; letter_index < item_info.len; letter_index++) {
+
+        for(var letter_index=0; letter_index < item_info.len; letter_index++) {
             if(this._puzzle[cur_row][cur_col] !== item_info.current[letter_index]) {
                 break;
             } else {

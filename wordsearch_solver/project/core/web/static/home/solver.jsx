@@ -6,7 +6,6 @@ export class WordSearchGrid {
 
     }
 
-
     solve(target_words) {
         var validators = [
             new Top(this._puzzle, "Top"),
@@ -39,18 +38,14 @@ class _WordSearchGrid {
         }
     }
 
-
     solve() {
-        var found_items = new Set();
         var results = [];
         var validator_length=this._validators.length;
         if(this._target_words.length > 0) {
-            var row_index;
-            for(row_index = 0; row_index < this._data_info.row; row_index++) {
-                var col_index;
-                for(col_index = 0; col_index < this._data_info.col; col_index++) {
-                    var diff_index;
-                    for(diff_index=0; diff_index < this._target_words.length; diff_index++) {
+            for( var row_index = 0; row_index < this._data_info.row; row_index++) {
+
+                for(var col_index = 0; col_index < this._data_info.col; col_index++) {
+                    for(var diff_index=0; diff_index < this._target_words.length; diff_index++) {
                         for(var validator_index=0; validator_index < validator_length; validator_index++) {
                             var current_validator = this._validators[validator_index];
                             if(current_validator.check({current: row_index, len: this._data_info.row},
