@@ -1,0 +1,28 @@
+{
+  "data": [
+    ["O", "T", "F", "I", "S", "H", "I", "N", "G", "D", "E", "O", "M", "B", "I", "E", "K", "M", "M", "Y", "B", "S", "D"],
+    ["H", "I", "K", "I", "N", "G", "K", "N", "V", "B", "M", "I", "V", "X", "S", "A", "E", "T", "S", "S", "E", "R", "L"],
+    ["S", "E", "S", "A", "G", "C", "M", "D", "C", "B", "R", "W", "V", "O", "B", "K", "N", "X", "T", "Q", "A", "A", "I"],
+    ["W", "Z", "W", "A", "T", "E", "R", "F", "A", "L", "L", "S", "O", "Z", "P", "S", "L", "O", "X", "U", "T", "E", "F"],
+    ["V", "T", "Q", "E", "G", "F", "U", "N", "L", "L", "I", "M", "Y", "A", "L", "P", "P", "E", "L", "I", "Y", "B", "E"],
+    ["S", "O", "H", "A", "R", "V", "O", "L", "L", "E", "Y", "B", "A", "L", "L", "T", "F", "K", "G", "R", "A", "M", "J"],
+    ["D", "W", "M", "G", "F", "I", "R", "E", "H", "O", "L", "E", "C", "A", "N", "Y", "O", "N", "T", "R", "N", "S", "A"],
+    ["P", "E", "I", "Q", "I", "T", "F", "A", "W", "W", "N", "K", "E", "I", "F", "Y", "I", "E", "Q", "E", "D", "L", "C"],
+    ["S", "N", "F", "M", "R", "L", "N", "P", "I", "D", "R", "B", "A", "U", "A", "M", "E", "K", "I", "L", "T", "E", "K"],
+    ["S", "S", "K", "E", "M", "A", "H", "L", "M", "A", "J", "P", "F", "R", "O", "N", "N", "S", "D", "S", "H", "E", "E"],
+    ["C", "O", "E", "M", "T", "I", "D", "S", "P", "A", "T", "K", "P", "Y", "O", "O", "P", "H", "N", "N", "E", "P", "T"],
+    ["L", "S", "U", "N", "O", "L", "N", "D", "A", "S", "C", "S", "W", "T", "N", "I", "I", "O", "U", "B", "B", "I", "U"],
+    ["I", "V", "O", "V", "I", "S", "N", "G", "I", "L", "G", "K", "S", "I", "E", "N", "R", "L", "O", "J", "E", "N", "G"],
+    ["F", "M", "X", "F", "E", "A", "Q", "T", "S", "U", "F", "W", "E", "P", "V", "U", "T", "D", "R", "W", "A", "G", "S"],
+    ["F", "R", "E", "T", "L", "N", "R", "U", "B", "U", "O", "R", "R", "G", "O", "E", "D", "F", "G", "H", "S", "B", "E"],
+    ["J", "P", "I", "S", "E", "A", "I", "S", "I", "L", "I", "I", "O", "N", "H", "R", "A", "A", "P", "V", "T", "A", "V"],
+    ["U", "W", "I", "V", "C", "K", "K", "R", "L", "T", "Z", "T", "M", "I", "C", "Y", "O", "I", "M", "H", "C", "G", "L"],
+    ["M", "H", "P", "Z", "E", "C", "N", "E", "S", "E", "O", "R", "S", "B", "T", "L", "R", "T", "A", "O", "A", "P", "O"],
+    ["P", "F", "H", "U", "O", "R", "Y", "A", "S", "L", "N", "S", "O", "U", "U", "I", "T", "H", "C", "T", "M", "I", "W"],
+    ["I", "M", "A", "R", "S", "H", "M", "A", "L", "L", "O", "W", "S", "T", "D", "M", "E", "F", "N", "D", "P", "L", "D"],
+    ["N", "F", "C", "O", "L", "A", "F", "F", "U", "B", "J", "K", "Y", "N", "T", "A", "N", "U", "R", "O", "I", "L", "K"],
+    ["G", "X", "E", "S", "J", "R", "L", "M", "U", "K", "G", "A", "M", "V", "Q", "F", "T", "L", "R", "G", "N", "O", "V"],
+    ["K", "I", "T", "E", "R", "U", "T", "A", "N", "S", "S", "R", "E", "S", "Y", "E", "G", "J", "O", "S", "G", "W", "H"]
+  ],
+  "target_words": ["ARTIST PAINTPOTS", "GAMES", "ROAD TRIP", "BEARS", "GEYSERS", "ROCKS", "BEATY AND THE BEAST", "HIKING", "SLEEPINGBAG", "BLANKET", "HOTDOGS", "SMORES", "BUFFALO", "ISLAND PARK", "SOUVENIRS", "BUGSPRAY", "LAKE", "SQUIRRELS", "CAMPFIRE", "LIFE JACKET", "SWIMMINGSUIT", "CAMPGROUND", "MARSHMALLOWS", "TENT", "CAMPING", "MONTANA", "TREES", "CLIFF JUMPING", "MOOSE", "TUBING", "DUTCH OVEN", "MOSQUITOS", "VOLLEYBALL", "ELK", "NATURE", "WATER", "WATER FALLS"]
+}
