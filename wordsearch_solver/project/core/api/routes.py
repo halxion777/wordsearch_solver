@@ -1,7 +1,6 @@
 import json
 from sanic import response
 from . import api
-from core.solver import WordSearchSolver
 
 @api.route("/sample_data")
 async def sample_data(request):
